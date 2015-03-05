@@ -1,3 +1,10 @@
+--[[
+    That's right! Off we go! We are moving!
+    Note the update function.
+    We are increasing x by 1 for every call of update, but what does that mean?
+        
+--]]
+
 function love.load()
       x = 100 
 end
