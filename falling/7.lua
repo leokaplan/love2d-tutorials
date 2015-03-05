@@ -1,3 +1,10 @@
+--[[
+    Once again, everything changed.
+    Now, for the first time, you were invited to affect our simulated world with your free will.
+    This lesson isn't very interesting, it's just to you see it working.
+--]]
+
+
 function love.load()
       x = 100 
       speed = 10
