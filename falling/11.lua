@@ -1,3 +1,8 @@
+--[[
+    Again, a silly lesson, but if you are familiar with modular programming or OO, you can see where are we going...
+
+--]]
+
 function love.load()
     player = {}
     player.x = 100 
