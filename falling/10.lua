@@ -1,3 +1,10 @@
+--[[
+    Another square???
+    Yes. 
+    Look at our code and imagine this without tables. (We would probably do player_x and enemy_y variables...)
+    OK, this lesson brings nothing new, but we cant take big steps yet: we are still small, but growing...
+--]]
+
 function love.load()
     player = {}
     player.x = 100 
