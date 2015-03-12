@@ -1,3 +1,13 @@
+--[[
+      How did you do it?
+      Oh, you haven't? 
+      Well, it is probably my fault:
+      I did not tell you about love.keyreleased...
+      It's the opposite of keypressed.
+      We didn't use any conditionals because it doesn't matter the key that was released.
+      We also set the initial sped to 0, but probably you did that too, right?
+--]]
+
 function love.load()
       x = 100 
       speed = 0
