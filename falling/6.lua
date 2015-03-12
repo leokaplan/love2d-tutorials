@@ -24,6 +24,8 @@
             This kind of hipotetical questions should always be popping into your head.
     If you read the error message you can guess where the problem is.
     The problem is that we can't access dt from the keypressed function.
+    Although lua variables have global scope by default, function parameters have a local scope. 
+    They just exist during the function execution.
     How do we solve it? Well, we will create a new variable, speed and change it in keypressed. 
     But we will use it to update the position just in the update function.
     Don't worry, I have already fixed for the next lesson.
