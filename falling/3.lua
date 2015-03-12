@@ -5,6 +5,7 @@
 --]]
 function love.load()
     -- see how a variable is declared? just choose a name and a initial value
+    -- lua variables have global scope by default, you can access them from any point of the program
     -- what would happen if you set this to other values? 
     -- can you make a variable for y too?
     x = 100 
