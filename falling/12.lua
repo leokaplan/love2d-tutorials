@@ -6,6 +6,10 @@
             * it show us a function call that return things.
             * it show us a function call that return MULTIPLE things.
             * it show us how to keep those return values.
+        now the semantics: 
+            with this line we get two new variables: 
+                WINW and WINH, representing the width and the height of the canvas.
+                
     Did you notice the way the enemy box fell? Yes, it was accelerating.
     I presume that you took a physics course in high school. 
         Remember when you learned about the position relative to time under constant accelearation (gravity) ?
@@ -15,14 +19,20 @@
         You thought you would never use it, right? Well, wrong.
         We are building a basic physics engine, so we need physics. 
         in love.update I did a direct translation of the theory above
-
+        
+    and finally, we will use WINH and WINW (we didn't got them for nothing...) 
+        we will set the player intial position in x 
+            to the center of the screen (half of it's width)
+        we will set the player initial position in y to
+            the bottom of the screen. 
+                why did I put the -50? what happens if you remove it?
 --]]
 
 
 function love.load()
     WINW,WINH = love.graphics.getDimensions()
     player = {}
-    player.x = 100 
+    player.x = WINW/2 
     player.speed = 0
     player.color = {255,0,0,255}
     enemy = {}
