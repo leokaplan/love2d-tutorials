@@ -38,12 +38,13 @@ function love.load()
     enemy = {}
     enemy.y = 0
     enemy.speed = 10
-    enemy.color = {0,0,0,255}
+    enemy.color = {0,0,255,255}
     gravity = 10
 end
 function love.update(dt)
     player.x = player.x + player.speed*dt   
-    enemy.y = enemy.y + enemy.speed*dt + gravity*dt*dt/2  
+    enemy.y = enemy.y + enemy.speed*dt
+    enemy.speed = enemy.speed + gravity*dt
 end
 function love.draw()
     love.graphics.setColor(player.color)

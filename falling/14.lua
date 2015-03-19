@@ -1,11 +1,8 @@
 --[[
-    Read our code. 
-    It's a little repetitive, isn't it?
-    I just made every variable "bound" to a table, except for gravity
-    Also, all our arbitrary values are in love.load function.
-    This is just a organization lesson. 
-    
+    constrains
 --]]
+
+
 
 
 function love.load()
@@ -17,20 +14,27 @@ function love.load()
     player.x = WINW/2 
     player.y = WINH - player.size
     player.speed = 0
-    player.acc = 20
+    player.acc = 50
     player.color = {255,0,0,255}
     
     enemy = {}
     enemy.size = 50
     enemy.x = 100
     enemy.y = 0
-    enemy.speed = 10
+    enemy.speed = 0
     enemy.color = {0,0,255,255}
+    
 end
 function love.update(dt)
-    player.x = player.x + player.speed*dt   
-    enemy.y = enemy.y + enemy.speed*dt 
+    if enemy.y > WINH then
+        enemy.y = 0
+    else
+        enemy.y = enemy.y + enemy.speed*dt 
+    end
     enemy.speed = enemy.speed + gravity*dt
+    if player.x < WINW-player.x or player.x > 0 then
+        player.x = player.x + player.speed*dt   
+    end
 end
 function love.draw()
     love.graphics.setColor(player.color)

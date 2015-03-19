@@ -11,7 +11,7 @@ function love.load()
     enemy = {}
     enemy.y = 0
     enemy.speed = 10
-    enemy.color = {0,0,0,255}
+    enemy.color = {0,0,255,255}
 end
 function love.update(dt)
     player.x = player.x + player.speed*dt   
